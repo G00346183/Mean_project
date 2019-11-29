@@ -1,0 +1,37 @@
+<mat-card>
+    <form (submit)="onEditBook(bookForm)" #bookForm="ngForm">
+      <mat-form-field>
+          <label> Book Title</label>
+        <input
+          matInput
+          type="text"
+          name="title"
+          ngModel={{book.title}}
+          required
+          #title="ngModel">
+      </mat-form-field>
+      <mat-form-field>
+          <label>Book Year</label>
+        <textarea
+          matInput
+          name="year"
+          ngModel={{book.year}}
+          required
+          #content="ngModel"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+          <label>Book Author</label>
+        <textarea
+          matInput
+         rows="4"
+          name="author"
+          ngModel={{book.author}}
+          required
+          #content="ngModel"></textarea>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        color="accent"
+        type="submit">Edit Book</button>
+    </form>
+  </mat-card>

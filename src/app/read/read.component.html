@@ -1,0 +1,26 @@
+<!-- <ul>
+  <li *ngFor="let book of MyBooks">
+    <p>{{book.Title}}</p>
+    <p>{{book.Year}}</p>
+    <img src={{book.Author}}>
+  </li>
+</ul> -->
+
+<mat-accordion *ngFor="let book of MyBooks">
+    <mat-expansion-panel [expanded]="true" >
+    <mat-expansion-panel-header>
+    <mat-panel-title>
+    <h3> {{ book.title }} </h3>
+    </mat-panel-title>
+    <mat-panel-description>
+    <h3>{{ book.year }}</h3>
+    </mat-panel-description>
+    </mat-expansion-panel-header>
+    <img src="{{book.author}}">
+    <mat-action-row>
+  <button mat-button [routerLink]="['/edit', book._id]" color="primary">EDIT</button>
+    
+    <button mat-button (click)="onDelete(book._id)" color="warn">DELETE</button>
+    </mat-action-row>
+    </mat-expansion-panel>
+    </mat-accordion>
