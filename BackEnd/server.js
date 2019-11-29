@@ -7,7 +7,7 @@ const PORT = 4000;
 const cors = require('cors');
 const mongoose = require('mongoose');
 
-const mongoDB = 'mongodb://g00346183:Loser123$@ds237373.mlab.com:37373/g00346183'
+const mongoDB = 'mongodb+srv://Conor:mongodb123@cluster0-ndyqk.mongodb.net/test?retryWrites=true&w=majority'
 mongoose.connect(mongoDB, {useNewUrlParser:true});
 
 const Schema = mongoose.Schema;
